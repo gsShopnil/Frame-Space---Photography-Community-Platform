@@ -6,25 +6,22 @@
   <meta name="description" content="Explore community photography on FrameSpace by category, title, or photographer.">
   <title>Explore — FrameSpace</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/responsive.css">
 
-  <!-- JavaScript (Order Matters!) -->
   <script src="js/main.js" defer></script>
   <script src="js/data.js" defer></script>
+  <script src="js/storage.js" defer></script>
   <script src="js/feed.js" defer></script>
   <script src="js/explore.js" defer></script>
 </head>
 <body>
 
-  <!-- Header & Navigation -->
   <header class="site-header">
     <div class="container navbar">
       <a href="index.html" class="brand-logo">Frame<span>Space</span></a>
@@ -52,7 +49,6 @@
   </header>
 
   <main>
-    <!-- Page Header -->
     <section class="page-header">
       <div class="container">
         <h1>Explore Photographs</h1>
@@ -60,7 +56,6 @@
       </div>
     </section>
 
-    <!-- Search, Filter & Gallery -->
     <section class="section">
       <div class="container">
         <div class="explore-toolbar">
@@ -85,7 +80,6 @@
             </div>
           </div>
 
-          <!-- Category Filter Pills Rendered by js/explore.js -->
           <div id="categoryFilters" class="filter-pills" role="group" aria-label="Filter by category"></div>
         </div>
 
@@ -93,10 +87,8 @@
           <p id="resultsCount">Showing 0 photographs</p>
         </div>
 
-        <!-- Filtered Photo Grid -->
         <div id="exploreGrid" class="photo-grid"></div>
 
-        <!-- Empty Search Result State -->
         <div id="emptyState" class="empty-state" hidden>
           <h3>No Photographs Found</h3>
           <p>Try a different search term or clear your category filter.</p>
@@ -106,7 +98,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
