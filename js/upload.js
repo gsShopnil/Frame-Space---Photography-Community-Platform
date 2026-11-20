@@ -1,5 +1,4 @@
 let selectedImageDataUrl = "";
-const sessionUploads = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   const uploadForm = document.getElementById("uploadForm");
@@ -8,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   populatePhotographerSelect();
   bindFilePreview();
   bindUploadSubmit(uploadForm);
+  renderUploadedPhotos();
 });
 
 function populatePhotographerSelect() {
@@ -119,27 +119,40 @@ function bindUploadSubmit(form) {
       comments: []
     };
 
-    samplePhotos.unshift(newPhoto);
-    sessionUploads.unshift(newPhoto);
+    if (typeof saveUploadedPhoto === "function") {
+      const saved = saveUploadedPhoto(newPhoto);
+      if (!saved) {
+        showUploadError("Browser storage is full. Please try a smaller image.");
+        return;
+      }
+    }
 
-    renderSessionUploads();
+    samplePhotos.unshift(newPhoto);
+    renderUploadedPhotos();
     form.reset();
     resetImagePreview();
 
     if (successEl) {
-      successEl.textContent = `"${title}" has been added to FrameSpace!`;
+      successEl.textContent = `"${title}" has been saved and published to FrameSpace!`;
       successEl.hidden = false;
     }
   });
 }
 
-function renderSessionUploads() {
+function renderUploadedPhotos() {
   const section = document.getElementById("uploadedSessionSection");
   const grid = document.getElementById("uploadedSessionGrid");
   if (!section || !grid) return;
 
+  const uploaded = typeof getUploadedPhotos === "function" ? getUploadedPhotos() : [];
+  if (uploaded.length === 0) {
+    section.hidden = true;
+    return;
+  }
+
+  const hydratedUploaded = uploaded.map((item) => getPhotoById(item.id));
   section.hidden = false;
-  renderPhotoFeed(sessionUploads, grid);
+  renderPhotoFeed(hydratedUploaded, grid);
 }
 
 function resetImagePreview() {
