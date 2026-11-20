@@ -18,6 +18,7 @@
   <script src="js/data.js" defer></script>
   <script src="js/storage.js" defer></script>
   <script src="js/feed.js" defer></script>
+  <script src="js/photo-of-the-day.js" defer></script>
 </head>
 <body>
 
@@ -74,25 +75,15 @@
 
     <section class="section">
       <div class="container">
-        <div class="section-header">
-          <h2>Featured Photography</h2>
-          <p class="section-subtitle">Curated visual storytelling selected by the FrameSpace community.</p>
+        <div class="section-header-row">
+          <div>
+            <h2>Photo of the Day</h2>
+            <p class="section-subtitle">Selected visual storytelling and the craft behind the frame.</p>
+          </div>
+          <button type="button" id="cyclePotdBtn" class="btn btn-outline">Next Featured Story</button>
         </div>
 
-        <article class="featured-showcase">
-          <div class="featured-media">
-            <img src="assets/images/photos/featured-street.jpg" alt="Rain-slicked alley reflecting warm streetlamps">
-          </div>
-          <div class="featured-content">
-            <span class="badge">Editorial Pick &bull; Street</span>
-            <h3>Monsoon Reflections</h3>
-            <p class="featured-story">
-              Shot just minutes after a heavy evening downpour, when the empty pavement turned into a mirror for warm sodium streetlights and passing rickshaws.
-            </p>
-            <p class="featured-meta">Captured by <strong>Tanzir Hawlader</strong> &mdash; Old Dhaka</p>
-            <a href="photo-details.html?id=photo-4" class="btn btn-outline">View Photo Story</a>
-          </div>
-        </article>
+        <div id="photoOfTheDayContainer"></div>
       </div>
     </section>
 
