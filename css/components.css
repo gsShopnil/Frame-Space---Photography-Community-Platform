@@ -52,7 +52,7 @@
   background: transparent;
   border: 1px solid var(--border-color);
   color: var(--text-primary);
-  padding: 0.4rem 0.75rem;
+  padding: 0.45rem 0.85rem;
   border-radius: var(--radius-sm);
   font-size: 0.9rem;
   cursor: pointer;
@@ -167,6 +167,8 @@
   font-size: 0.8rem;
   color: var(--text-secondary);
   display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
   justify-content: space-between;
 }
 
@@ -356,12 +358,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-xs);
   margin-bottom: var(--space-sm);
 }
 
 .photo-card-title {
   font-size: 1.15rem;
   margin-bottom: var(--space-xs);
+  overflow-wrap: anywhere;
 }
 
 .photo-card-title a:hover {
@@ -374,10 +378,12 @@
   margin: var(--space-xs) 0 var(--space-md);
   line-height: 1.5;
   flex: 1;
+  overflow-wrap: anywhere;
 }
 
 .photo-card-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--space-sm);
   margin-bottom: var(--space-md);
@@ -387,7 +393,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.35rem 0.7rem;
+  padding: 0.38rem 0.75rem;
   background-color: transparent;
   color: var(--text-secondary);
   border: 1px solid var(--border-color);
@@ -417,9 +423,10 @@
 
 .photo-card-footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-sm);
+  gap: var(--space-xs) var(--space-sm);
   padding-top: var(--space-sm);
   border-top: 1px solid var(--border-color);
   font-size: 0.82rem;
@@ -762,6 +769,7 @@
 
 .photo-detail-description {
   margin-bottom: var(--space-lg);
+  overflow-wrap: anywhere;
 }
 
 .photo-detail-meta {
@@ -815,8 +823,13 @@
   border-radius: var(--radius-sm);
 }
 
+.comment-item p {
+  overflow-wrap: anywhere;
+}
+
 .comment-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: var(--space-sm);
   margin-bottom: var(--space-xs);
@@ -863,6 +876,7 @@
   border: 1px dashed var(--border-color);
   border-radius: var(--radius-sm);
   background-color: var(--bg-primary);
+  overflow: hidden;
 }
 
 .file-hint {
