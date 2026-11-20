@@ -5,7 +5,8 @@
   }
 
   .hero-grid,
-  .featured-showcase {
+  .featured-showcase,
+  .photo-detail-layout {
     grid-template-columns: 1fr;
   }
 
@@ -71,7 +72,9 @@
     grid-template-columns: 1fr;
   }
 
-  .featured-content {
+  .featured-content,
+  .photo-detail-panel,
+  .comments-section {
     padding: var(--space-lg);
   }
 
