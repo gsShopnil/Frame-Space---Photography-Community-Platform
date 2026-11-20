@@ -6,91 +6,215 @@
   <meta name="description" content="FrameSpace — A Community Beyond the Frame. Discover visual stories and share your photography.">
   <title>FrameSpace — A Community Beyond the Frame</title>
 
-  <!-- Google Fonts: Playfair Display (Headings) & Inter (UI Body) -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Design System Stylesheets (Order Matters!) -->
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Global JavaScript -->
+  <script src="js/main.js" defer></script>
 </head>
 <body>
 
+  <!-- Header & Navigation -->
   <header class="site-header">
     <div class="container navbar">
       <a href="index.html" class="brand-logo">Frame<span>Space</span></a>
-      <nav aria-label="Primary Navigation">
+
+      <button
+        type="button"
+        id="navToggle"
+        class="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+
+      <nav id="navMenu" class="nav-menu" aria-label="Primary Navigation">
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="#" class="nav-link">Explore</a></li>
-          <li><a href="#" class="nav-link">Upload</a></li>
-          <li><a href="#" class="nav-link">About</a></li>
+          <li><a href="explore.html" class="nav-link">Explore</a></li>
+          <li><a href="upload.html" class="nav-link">Upload</a></li>
+          <li><a href="profile.html" class="nav-link">Profile</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- 1. Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="hero-eyebrow">A Community Beyond the Frame</span>
+          <h1 class="hero-title">Where Visual Stories Find Their Voice</h1>
+          <p class="hero-description">
+            FrameSpace brings together photographers who see light, patience, and human stories behind every shutter click. Share your portfolio, discover perspectives, and connect with fellow artists.
+          </p>
+          <div class="hero-actions">
+            <a href="explore.html" class="btn btn-primary">Explore Gallery</a>
+            <a href="upload.html" class="btn btn-outline">Share a Photograph</a>
+          </div>
+        </div>
+
+        <figure class="hero-frame">
+          <img src="assets/images/photos/hero-frame.jpg" alt="Atmospheric evening street scene captured through mist">
+          <figcaption class="hero-caption">
+            <span>Dusk on Old Streets</span>
+            <span>Dhaka &bull; 35mm</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 2. Featured Photography -->
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <h1>Design System Preview</h1>
-          <p class="section-subtitle">Testing FrameSpace typography, dark charcoal palette, muted-gold accents, and responsive grid.</p>
+          <h2>Featured Photography</h2>
+          <p class="section-subtitle">Curated visual storytelling selected by the FrameSpace community.</p>
         </div>
 
-        <!-- Button Preview -->
-        <div style="display: flex; gap: 1rem; margin-bottom: 2.5rem; flex-wrap: wrap;">
-          <a href="#" class="btn btn-primary">Primary Button</a>
-          <a href="#" class="btn btn-outline">Outline Button</a>
+        <article class="featured-showcase">
+          <div class="featured-media">
+            <img src="assets/images/photos/featured-street.jpg" alt="Rain-slicked alley reflecting warm streetlamps">
+          </div>
+          <div class="featured-content">
+            <span class="badge">Editorial Pick &bull; Street</span>
+            <h3>Monsoon Reflections</h3>
+            <p class="featured-story">
+              Shot just minutes after a heavy evening downpour, when the empty pavement turned into a mirror for warm sodium streetlights and passing rickshaws.
+            </p>
+            <p class="featured-meta">Captured by <strong>Arafat Rahman</strong> &mdash; Old Dhaka</p>
+            <a href="explore.html" class="btn btn-outline">Discover More Stories</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. Latest Uploads Preview -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <h2>Latest Uploads</h2>
+            <p class="section-subtitle">Fresh frames shared by our community members.</p>
+          </div>
+          <a href="explore.html" class="text-link">View all photographs &rarr;</a>
         </div>
 
-        <!-- Card & Grid Preview -->
         <div class="photo-grid">
           <article class="photo-card">
-            <div class="photo-card-media"></div>
-            <div class="photo-card-body">
-              <div class="photo-card-top">
-                <span class="badge">Street</span>
-                <span class="photo-card-meta">24 Likes</span>
-              </div>
-              <h3 class="photo-card-title">Rainy Evening in Dhaka</h3>
-              <p class="photo-card-meta">by Sample Photographer</p>
+            <div class="photo-card-media">
+              <img src="assets/images/photos/upload-1.jpg" alt="Morning river fog with wooden boats">
             </div>
-          </article>
-
-          <article class="photo-card">
-            <div class="photo-card-media"></div>
             <div class="photo-card-body">
               <div class="photo-card-top">
                 <span class="badge">Landscape</span>
-                <span class="photo-card-meta">41 Likes</span>
+                <span class="photo-card-meta">34 Likes</span>
               </div>
-              <h3 class="photo-card-title">Golden Hour Mist</h3>
-              <p class="photo-card-meta">by Sample Photographer</p>
+              <h3 class="photo-card-title">Dawn on the Buriganga</h3>
+              <p class="photo-card-meta">by Nadia Karim</p>
             </div>
           </article>
 
           <article class="photo-card">
-            <div class="photo-card-media"></div>
+            <div class="photo-card-media">
+              <img src="assets/images/photos/upload-2.jpg" alt="Close-up portrait bathed in soft window light">
+            </div>
             <div class="photo-card-body">
               <div class="photo-card-top">
                 <span class="badge">Portrait</span>
-                <span class="photo-card-meta">18 Likes</span>
+                <span class="photo-card-meta">28 Likes</span>
               </div>
-              <h3 class="photo-card-title">Shadows &amp; Light</h3>
-              <p class="photo-card-meta">by Sample Photographer</p>
+              <h3 class="photo-card-title">Window Light Study</h3>
+              <p class="photo-card-meta">by Tariq Hasan</p>
+            </div>
+          </article>
+
+          <article class="photo-card">
+            <div class="photo-card-media">
+              <img src="assets/images/photos/upload-3.jpg" alt="Geometric shadows on brutalist concrete wall">
+            </div>
+            <div class="photo-card-body">
+              <div class="photo-card-top">
+                <span class="badge">Architecture</span>
+                <span class="photo-card-meta">19 Likes</span>
+              </div>
+              <h3 class="photo-card-title">Concrete Geometry</h3>
+              <p class="photo-card-meta">by Samira Chowdhury</p>
             </div>
           </article>
         </div>
       </div>
     </section>
+
+    <!-- 4. Photographer Spotlight -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Photographer Spotlight</h2>
+          <p class="section-subtitle">Meet the visual storytellers shaping FrameSpace.</p>
+        </div>
+
+        <div class="spotlight-card">
+          <img
+            src="assets/images/avatars/spotlight-photographer.jpg"
+            alt="Portrait of spotlight photographer Nadia Karim"
+            class="spotlight-avatar"
+          >
+          <div class="spotlight-info">
+            <p class="spotlight-meta">Documentary &amp; Landscape &bull; Sylhet, Bangladesh</p>
+            <h3>Nadia Karim</h3>
+            <p class="spotlight-bio">
+              Capturing quiet early-morning moments along rivers, tea valleys, and rural train stations. Nadia focuses on natural light and unhurried visual narratives.
+            </p>
+            <a href="profile.html" class="btn btn-outline">View Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 FrameSpace — A Community Beyond the Frame.</p>
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo">Frame<span>Space</span></a>
+          <p style="margin-top: 0.75rem; max-width: 36ch;">
+            A Community Beyond the Frame. Built for photographers who value craft, light, and storytelling.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Feed</a></li>
+            <li><a href="explore.html">Discover Photos</a></li>
+            <li><a href="upload.html">Upload Photograph</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Community</h4>
+          <ul class="footer-links">
+            <li><a href="profile.html">Photographer Profiles</a></li>
+            <li><a href="about.html">About FrameSpace</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer-bottom">
+        &copy; <span id="currentYear">2026</span> FrameSpace &mdash; A Community Beyond the Frame.
+      </p>
     </div>
   </footer>
 
