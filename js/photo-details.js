@@ -100,6 +100,9 @@ function bindDetailInteractions(photo) {
     likeBtn.addEventListener("click", () => {
       photo.isLiked = !photo.isLiked;
       photo.likes += photo.isLiked ? 1 : -1;
+      if (typeof savePhotoInteraction === "function") {
+        savePhotoInteraction(photo);
+      }
       updateLikeButtonUI(likeBtn, photo);
     });
   }
@@ -107,6 +110,9 @@ function bindDetailInteractions(photo) {
   if (saveBtn) {
     saveBtn.addEventListener("click", () => {
       photo.isSaved = !photo.isSaved;
+      if (typeof savePhotoInteraction === "function") {
+        savePhotoInteraction(photo);
+      }
       updateSaveButtonUI(saveBtn, photo);
     });
   }
@@ -139,6 +145,10 @@ function bindDetailInteractions(photo) {
         text,
         createdAt: new Date().toISOString().split("T")[0]
       });
+
+      if (typeof savePhotoInteraction === "function") {
+        savePhotoInteraction(photo);
+      }
 
       authorInput.value = "";
       textInput.value = "";

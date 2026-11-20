@@ -162,6 +162,10 @@ function togglePhotoLike(photo) {
   photo.isLiked = !photo.isLiked;
   photo.likes += photo.isLiked ? 1 : -1;
 
+  if (typeof savePhotoInteraction === "function") {
+    savePhotoInteraction(photo);
+  }
+
   document.querySelectorAll(`[data-like-id="${photo.id}"]`).forEach((btn) => {
     updateLikeButtonUI(btn, photo);
   });
@@ -169,6 +173,10 @@ function togglePhotoLike(photo) {
 
 function togglePhotoSave(photo) {
   photo.isSaved = !photo.isSaved;
+
+  if (typeof savePhotoInteraction === "function") {
+    savePhotoInteraction(photo);
+  }
 
   document.querySelectorAll(`[data-save-id="${photo.id}"]`).forEach((btn) => {
     updateSaveButtonUI(btn, photo);
@@ -186,3 +194,4 @@ function updateSaveButtonUI(button, photo) {
   button.classList.toggle("is-saved", Boolean(photo.isSaved));
   button.textContent = photo.isSaved ? "Saved" : "Save";
 }
+
