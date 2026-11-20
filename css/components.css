@@ -439,6 +439,28 @@
   border-color: var(--accent-gold);
 }
 
+.form-label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.form-error {
+  font-size: 0.85rem;
+  color: var(--color-danger);
+}
+
+.form-success {
+  padding: var(--space-md);
+  border: 1px solid var(--color-success);
+  background-color: rgba(107, 163, 122, 0.12);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
 .explore-toolbar {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
@@ -702,11 +724,6 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-.form-error {
-  font-size: 0.85rem;
-  color: var(--color-danger);
-}
-
 .comments-list {
   display: flex;
   flex-direction: column;
@@ -735,6 +752,74 @@
 
 .comment-date {
   color: var(--text-secondary);
+}
+
+.upload-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.upload-card,
+.preview-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+}
+
+.upload-form {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.file-input-box {
+  padding: var(--space-md);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-primary);
+}
+
+.file-hint {
+  margin-top: var(--space-xs);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.preview-card h2 {
+  font-size: 1.35rem;
+  margin-bottom: var(--space-md);
+}
+
+.preview-frame {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--space-sm);
+  text-align: center;
+}
+
+.preview-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.uploaded-session-section {
+  margin-top: var(--space-2xl);
 }
 
 .site-footer {
