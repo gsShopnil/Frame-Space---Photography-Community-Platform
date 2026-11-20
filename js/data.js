@@ -1,0 +1,119 @@
+
+
+const samplePhotographers = [
+  {
+    id: "gsshopnil",
+    name: "Galib Shahriar Shopnil",
+    username: "@gsshopnil",
+    location: "Dhaka, Bangladesh",
+    bio: "Visual Storyteller",
+    interests: ["Street", "Documentary", "Natural Light"],
+    avatar: "assets/images/avatars/spotlight-photographer.jpg"
+  },
+  {
+    id: "Tanzirhaw",
+    name: "Tanzir Hawlader",
+    username: "@Tanzirhaw",
+    location: "Dhaka, Bangladesh",
+    bio: "Street and urban storyteller drawn to monsoon reflections, shadows, and night markets.",
+    interests: ["Street", "Night Photography", "35mm"],
+    avatar: "assets/images/avatars/spotlight-photographer.jpg"
+  },
+  {
+    id: "tariq-hasan",
+    name: "Tariq Hasan",
+    username: "@tariqportraits",
+    location: "Chattogram, Bangladesh",
+    bio: "Portrait photographer exploring human expression through soft window light and minimalism.",
+    interests: ["Portrait", "Monochrome", "Editorial"],
+    avatar: "assets/images/avatars/spotlight-photographer.jpg"
+  },
+  {
+    id: "samira-chowdhury",
+    name: "Samira Chowdhury",
+    username: "@samiraarch",
+    location: "Rajshahi, Bangladesh",
+    bio: "Architectural observer focused on geometry, brutalist concrete, and quiet public spaces.",
+    interests: ["Architecture", "Minimalism", "Geometry"],
+    avatar: "assets/images/avatars/spotlight-photographer.jpg"
+  }
+];
+
+const samplePhotos = [
+  {
+    id: "photo-1",
+    title: "Dawn on the Buriganga",
+    caption: "Wooden boats waiting quietly in winter river fog just before sunrise.",
+    category: "Landscape",
+    location: "Dhaka, Bangladesh",
+    image: "assets/images/photos/upload-1.jpg",
+    photographerId: "nadia-karim",
+    likes: 34,
+    createdAt: "2026-11-18"
+  },
+  {
+    id: "photo-2",
+    title: "Window Light Study",
+    caption: "Natural afternoon light cutting across a quiet studio corner.",
+    category: "Portrait",
+    location: "Chattogram, Bangladesh",
+    image: "assets/images/photos/upload-2.jpg",
+    photographerId: "tariq-hasan",
+    likes: 28,
+    createdAt: "2026-11-17"
+  },
+  {
+    id: "photo-3",
+    title: "Concrete Geometry",
+    caption: "Sharp afternoon shadows tracing lines across raw modernist concrete.",
+    category: "Architecture",
+    location: "Rajshahi, Bangladesh",
+    image: "assets/images/photos/upload-3.jpg",
+    photographerId: "samira-chowdhury",
+    likes: 19,
+    createdAt: "2026-11-15"
+  },
+  {
+    id: "photo-4",
+    title: "Monsoon Reflections",
+    caption: "Rain-slicked pavement mirroring warm evening streetlamps after a sudden downpour.",
+    category: "Street",
+    location: "Old Dhaka, Bangladesh",
+    image: "assets/images/photos/featured-street.jpg",
+    photographerId: "arafat-rahman",
+    likes: 52,
+    createdAt: "2026-11-14"
+  },
+  {
+    id: "photo-5",
+    title: "Dusk on Old Streets",
+    caption: "A brief pause in evening traffic as mist settles between old brick storefronts.",
+    category: "Street",
+    location: "Dhaka, Bangladesh",
+    image: "assets/images/photos/hero-frame.jpg",
+    photographerId: "arafat-rahman",
+    likes: 41,
+    createdAt: "2026-11-12"
+  },
+  {
+    id: "photo-6",
+    title: "Tea Valley Morning",
+    caption: "Soft golden mist drifting above hillside tea leaves at first light.",
+    category: "Nature",
+    location: "Sreemangal, Bangladesh",
+    image: "assets/images/photos/upload-4.jpg",
+    photographerId: "nadia-karim",
+    likes: 47,
+    createdAt: "2026-11-10"
+  }
+];
+function getPhotographerById(photographerId) {
+  return (
+    samplePhotographers.find((person) => person.id === photographerId) || {
+      id: "unknown",
+      name: "Community Photographer",
+      username: "@framespace",
+      location: "Unknown Location"
+    }
+  );
+}
