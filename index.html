@@ -5,23 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="FrameSpace — A Community Beyond the Frame. Discover visual stories and share your photography.">
   <title>FrameSpace — A Community Beyond the Frame</title>
+
+  <!-- Google Fonts: Playfair Display (Headings) & Inter (UI Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Design System Stylesheets (Order Matters!) -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-  <header>
-    <h1>FrameSpace</h1>
-    <p>A Community Beyond the Frame.</p>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">Frame<span>Space</span></a>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="#" class="nav-link">Explore</a></li>
+          <li><a href="#" class="nav-link">Upload</a></li>
+          <li><a href="#" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>Welcome to FrameSpace</h2>
-      <p>Project initialization successful. Visual design and community feed coming soon.</p>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h1>Design System Preview</h1>
+          <p class="section-subtitle">Testing FrameSpace typography, dark charcoal palette, muted-gold accents, and responsive grid.</p>
+        </div>
+
+        <!-- Button Preview -->
+        <div style="display: flex; gap: 1rem; margin-bottom: 2.5rem; flex-wrap: wrap;">
+          <a href="#" class="btn btn-primary">Primary Button</a>
+          <a href="#" class="btn btn-outline">Outline Button</a>
+        </div>
+
+        <!-- Card & Grid Preview -->
+        <div class="photo-grid">
+          <article class="photo-card">
+            <div class="photo-card-media"></div>
+            <div class="photo-card-body">
+              <div class="photo-card-top">
+                <span class="badge">Street</span>
+                <span class="photo-card-meta">24 Likes</span>
+              </div>
+              <h3 class="photo-card-title">Rainy Evening in Dhaka</h3>
+              <p class="photo-card-meta">by Sample Photographer</p>
+            </div>
+          </article>
+
+          <article class="photo-card">
+            <div class="photo-card-media"></div>
+            <div class="photo-card-body">
+              <div class="photo-card-top">
+                <span class="badge">Landscape</span>
+                <span class="photo-card-meta">41 Likes</span>
+              </div>
+              <h3 class="photo-card-title">Golden Hour Mist</h3>
+              <p class="photo-card-meta">by Sample Photographer</p>
+            </div>
+          </article>
+
+          <article class="photo-card">
+            <div class="photo-card-media"></div>
+            <div class="photo-card-body">
+              <div class="photo-card-top">
+                <span class="badge">Portrait</span>
+                <span class="photo-card-meta">18 Likes</span>
+              </div>
+              <h3 class="photo-card-title">Shadows &amp; Light</h3>
+              <p class="photo-card-meta">by Sample Photographer</p>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; FrameSpace. Built for Photographers Made by Photographer.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 FrameSpace — A Community Beyond the Frame.</p>
+    </div>
   </footer>
 
 </body>
