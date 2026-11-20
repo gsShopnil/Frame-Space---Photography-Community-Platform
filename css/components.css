@@ -914,6 +914,50 @@
   margin-top: var(--space-2xl);
 }
 
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.about-story p + p {
+  margin-top: var(--space-md);
+}
+
+.about-story h2 {
+  margin-bottom: var(--space-md);
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.vision-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+}
+
+.vision-card h3 {
+  margin: var(--space-sm) 0;
+}
+
+.about-cta-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
 .site-footer {
   background-color: var(--bg-surface);
   border-top: 1px solid var(--border-color);

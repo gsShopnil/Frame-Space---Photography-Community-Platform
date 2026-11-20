@@ -7,7 +7,8 @@
   .hero-grid,
   .potd-showcase,
   .photo-detail-layout,
-  .upload-layout {
+  .upload-layout,
+  .about-grid {
     grid-template-columns: 1fr;
   }
 
@@ -16,7 +17,8 @@
     max-height: 440px;
   }
 
-  .photo-grid {
+  .photo-grid,
+  .vision-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-md);
   }
@@ -79,6 +81,7 @@
 
   .explore-controls-row,
   .photo-grid,
+  .vision-grid,
   .footer-grid,
   .profile-stats,
   .form-row-2 {
@@ -90,7 +93,9 @@
   .photo-detail-panel,
   .comments-section,
   .upload-card,
-  .preview-card {
+  .preview-card,
+  .vision-card,
+  .about-cta-card {
     padding: var(--space-lg);
   }
 
