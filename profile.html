@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View photographer portfolios, biographies, and visual stories on FrameSpace.">
+  <title>Photographer Profile — FrameSpace</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script src="js/main.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/feed.js" defer></script>
+  <script src="js/profile.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">Frame<span>Space</span></a>
+
+      <button
+        type="button"
+        id="navToggle"
+        class="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+
+      <nav id="navMenu" class="nav-menu" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="explore.html" class="nav-link">Explore</a></li>
+          <li><a href="upload.html" class="nav-link">Upload</a></li>
+          <li><a href="profile.html" class="nav-link active">Profile</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="profileContent" class="section">
+      <div class="container">
+        <div id="photographerSwitcher" class="profile-switcher" aria-label="Switch photographer profile"></div>
+
+        <div class="profile-header-card">
+          <img
+            id="profileAvatar"
+            src="assets/images/avatars/spotlight-photographer.jpg"
+            alt="Photographer avatar"
+            class="profile-avatar"
+          >
+
+          <div>
+            <div class="profile-name-row">
+              <h1 id="profileName">Photographer Name</h1>
+              <span id="profileUsername" class="profile-username">@username</span>
+            </div>
+            <p id="profileLocation" class="profile-location">Location</p>
+            <p id="profileBio" class="profile-bio">Biography goes here.</p>
+            <div id="profileInterests" class="interest-tags"></div>
+          </div>
+        </div>
+
+        <div class="profile-stats">
+          <div class="stat-card">
+            <span id="statPhotos" class="stat-value">0</span>
+            <span class="stat-label">Photographs</span>
+          </div>
+          <div class="stat-card">
+            <span id="statLikes" class="stat-value">0</span>
+            <span class="stat-label">Total Likes</span>
+          </div>
+          <div class="stat-card">
+            <span id="statCategories" class="stat-value">0</span>
+            <span class="stat-label">Genres</span>
+          </div>
+        </div>
+
+        <div class="section-header">
+          <h2 id="galleryHeading">Portfolio</h2>
+          <p class="section-subtitle">Selected visual works shared on FrameSpace.</p>
+        </div>
+
+        <div id="profileGalleryGrid" class="photo-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo">Frame<span>Space</span></a>
+          <p style="margin-top: 0.75rem; max-width: 36ch;">
+            A Community Beyond the Frame. Built for photographers who value craft, light, and storytelling.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Feed</a></li>
+            <li><a href="explore.html">Discover Photos</a></li>
+            <li><a href="upload.html">Upload Photograph</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Community</h4>
+          <ul class="footer-links">
+            <li><a href="profile.html">Photographer Profiles</a></li>
+            <li><a href="about.html">About FrameSpace</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer-bottom">
+        &copy; <span id="currentYear">2026</span> FrameSpace &mdash; A Community Beyond the Frame.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
