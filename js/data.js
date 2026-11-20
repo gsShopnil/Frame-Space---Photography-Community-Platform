@@ -47,7 +47,13 @@ const samplePhotos = [
     image: "assets/images/photos/upload-1.jpg",
     photographerId: "gsshopnil",
     likes: 34,
-    createdAt: "2026-11-18"
+    isLiked: false,
+    isSaved: false,
+    createdAt: "2026-11-18",
+    comments: [
+      { author: "Tanzir Hawlader", text: "The morning mist on the water feels so peaceful.", createdAt: "2026-11-18" },
+      { author: "Tariq Hasan", text: "Love the tonal separation in the background boats.", createdAt: "2026-11-19" }
+    ]
   },
   {
     id: "photo-2",
@@ -58,7 +64,12 @@ const samplePhotos = [
     image: "assets/images/photos/upload-2.jpg",
     photographerId: "tariq-hasan",
     likes: 28,
-    createdAt: "2026-11-17"
+    isLiked: false,
+    isSaved: false,
+    createdAt: "2026-11-17",
+    comments: [
+      { author: "Galib Shahriar Shopnil", text: "Soft directional light never fails. Great framing.", createdAt: "2026-11-18" }
+    ]
   },
   {
     id: "photo-3",
@@ -69,7 +80,10 @@ const samplePhotos = [
     image: "assets/images/photos/upload-3.jpg",
     photographerId: "samira-chowdhury",
     likes: 19,
-    createdAt: "2026-11-15"
+    isLiked: false,
+    isSaved: false,
+    createdAt: "2026-11-15",
+    comments: []
   },
   {
     id: "photo-4",
@@ -80,7 +94,12 @@ const samplePhotos = [
     image: "assets/images/photos/featured-street.jpg",
     photographerId: "Tanzirhaw",
     likes: 52,
-    createdAt: "2026-11-14"
+    isLiked: false,
+    isSaved: false,
+    createdAt: "2026-11-14",
+    comments: [
+      { author: "Samira Chowdhury", text: "The warm reflections against dark asphalt look cinematic.", createdAt: "2026-11-15" }
+    ]
   },
   {
     id: "photo-5",
@@ -91,7 +110,10 @@ const samplePhotos = [
     image: "assets/images/photos/hero-frame.jpg",
     photographerId: "Tanzirhaw",
     likes: 41,
-    createdAt: "2026-11-12"
+    isLiked: false,
+    isSaved: false,
+    createdAt: "2026-11-12",
+    comments: []
   },
   {
     id: "photo-6",
@@ -102,7 +124,12 @@ const samplePhotos = [
     image: "assets/images/photos/upload-4.jpg",
     photographerId: "gsshopnil",
     likes: 47,
-    createdAt: "2026-11-10"
+    isLiked: false,
+    isSaved: false,
+    createdAt: "2026-11-10",
+    comments: [
+      { author: "Tariq Hasan", text: "Golden hour in Sreemangal always hits different.", createdAt: "2026-11-11" }
+    ]
   }
 ];
 
@@ -115,4 +142,8 @@ function getPhotographerById(photographerId) {
       location: "Unknown Location"
     }
   );
+}
+
+function getPhotoById(photoId) {
+  return samplePhotos.find((photo) => photo.id === photoId) || samplePhotos[0];
 }
