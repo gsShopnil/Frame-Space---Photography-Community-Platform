@@ -1,38 +1,34 @@
 :root {
-  --bg-primary: #121212;        /* Deep dark charcoal */
-  --bg-surface: #1b1b1b;        /* Elevated surface for cards & header */
-  --bg-surface-hover: #242424;  /* Subtle hover elevation */
-  --border-color: #2c2c2c;      /* Thin gallery divider lines */
+  --bg-primary: #121212;
+  --bg-surface: #1b1b1b;
+  --bg-surface-hover: #242424;
+  --border-color: #2c2c2c;
 
-  --text-primary: #f2efe9;      /* Warm off-white */
-  --text-secondary: #a39e93;    /* Muted warm gray for captions & meta */
+  --text-primary: #f2efe9;
+  --text-secondary: #a39e93;
 
-  --accent-gold: #c9a96e;       /* Subtle muted-gold accent */
-  --accent-gold-hover: #d8bc87; /* Slightly brighter gold on hover */
+  --accent-gold: #c9a96e;
+  --accent-gold-hover: #d8bc87;
 
-  --color-danger: #d96b6b;      /* For error messages & active likes */
-  --color-success: #6ba37a;     /* For form validation success */
+  --color-danger: #d96b6b;
+  --color-success: #6ba37a;
 
-  /* Typography */
   --font-heading: "Playfair Display", Georgia, serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
 
-  /* Spacing Scale */
-  --space-xs: 0.25rem;   /* 4px */
-  --space-sm: 0.5rem;    /* 8px */
-  --space-md: 1rem;      /* 16px */
-  --space-lg: 1.5rem;    /* 24px */
-  --space-xl: 2.5rem;    /* 40px */
-  --space-2xl: 4rem;     /* 64px */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
 
-  /* Layout & Borders */
   --container-width: 1200px;
   --radius-sm: 4px;
   --radius-md: 8px;
   --transition-fast: 0.2s ease;
 }
 
-/* 2. Modern CSS Reset */
 *,
 *::before,
 *::after {
@@ -41,7 +37,6 @@
   padding: 0;
 }
 
-/* 3. Base Document Styles */
 html {
   scroll-behavior: smooth;
 }
@@ -55,13 +50,13 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 main {
   flex: 1;
 }
 
-/* 4. Typography */
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
   font-weight: 600;
@@ -88,7 +83,20 @@ img {
   display: block;
 }
 
-/* 5. Layout Utilities */
+input[type="file"] {
+  max-width: 100%;
+  color: var(--text-secondary);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+
 .container {
   width: 90%;
   max-width: var(--container-width);
