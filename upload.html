@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Upload and share your photography with the FrameSpace community.">
+  <title>Upload Photograph — FrameSpace</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script src="js/main.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/feed.js" defer></script>
+  <script src="js/upload.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">Frame<span>Space</span></a>
+
+      <button
+        type="button"
+        id="navToggle"
+        class="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+
+      <nav id="navMenu" class="nav-menu" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="explore.html" class="nav-link">Explore</a></li>
+          <li><a href="upload.html" class="nav-link active">Upload</a></li>
+          <li><a href="profile.html" class="nav-link">Profile</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Share a Photograph</h1>
+        <p class="section-subtitle">Select an image from your device, add the story behind the frame, and publish to FrameSpace.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="upload-layout">
+          <div class="upload-card">
+            <form id="uploadForm" class="upload-form" novalidate>
+              <div>
+                <label for="photoFile" class="form-label">Photograph File</label>
+                <div class="file-input-box">
+                  <input
+                    type="file"
+                    id="photoFile"
+                    accept="image/jpeg, image/png, image/webp"
+                  >
+                  <p class="file-hint">Supported formats: JPG, PNG, WEBP (max 2 MB).</p>
+                </div>
+              </div>
+
+              <div>
+                <label for="photoPhotographer" class="form-label">Photographer</label>
+                <select id="photoPhotographer" class="form-select"></select>
+              </div>
+
+              <div>
+                <label for="photoTitle" class="form-label">Title</label>
+                <input
+                  type="text"
+                  id="photoTitle"
+                  class="form-input"
+                  placeholder="e.g., Golden Hour at Sadarghat"
+                >
+              </div>
+
+              <div class="form-row-2">
+                <div>
+                  <label for="photoCategory" class="form-label">Category</label>
+                  <select id="photoCategory" class="form-select">
+                    <option value="">Select category</option>
+                    <option value="Street">Street</option>
+                    <option value="Landscape">Landscape</option>
+                    <option value="Portrait">Portrait</option>
+                    <option value="Architecture">Architecture</option>
+                    <option value="Nature">Nature</option>
+                    <option value="Documentary">Documentary</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="photoLocation" class="form-label">Location</label>
+                  <input
+                    type="text"
+                    id="photoLocation"
+                    class="form-input"
+                    placeholder="e.g., Dhaka, Bangladesh"
+                  >
+                </div>
+              </div>
+
+              <div>
+                <label for="photoCaption" class="form-label">Caption / Story</label>
+                <textarea
+                  id="photoCaption"
+                  class="form-textarea"
+                  placeholder="Describe the light, moment, or story behind this photograph..."
+                ></textarea>
+              </div>
+
+              <p id="uploadError" class="form-error" hidden></p>
+              <div id="uploadSuccess" class="form-success" hidden></div>
+
+              <div>
+                <button type="submit" class="btn btn-primary">Submit Photograph</button>
+              </div>
+            </form>
+          </div>
+
+          <aside class="preview-card">
+            <h2>Live Image Preview</h2>
+            <div class="preview-frame">
+              <p id="previewPlaceholder">Select an image file to preview how your photograph will look.</p>
+              <img id="previewImage" src="" alt="Selected photograph preview" hidden>
+            </div>
+          </aside>
+        </div>
+
+        <div id="uploadedSessionSection" class="uploaded-session-section" hidden>
+          <div class="section-header">
+            <h2>Recently Uploaded</h2>
+            <p class="section-subtitle">Photographs submitted in this session.</p>
+          </div>
+          <div id="uploadedSessionGrid" class="photo-grid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo">Frame<span>Space</span></a>
+          <p style="margin-top: 0.75rem; max-width: 36ch;">
+            A Community Beyond the Frame. Built for photographers who value craft, light, and storytelling.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Feed</a></li>
+            <li><a href="explore.html">Discover Photos</a></li>
+            <li><a href="upload.html">Upload Photograph</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Community</h4>
+          <ul class="footer-links">
+            <li><a href="profile.html">Photographer Profiles</a></li>
+            <li><a href="about.html">About FrameSpace</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer-bottom">
+        &copy; <span id="currentYear">2026</span> FrameSpace &mdash; A Community Beyond the Frame.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

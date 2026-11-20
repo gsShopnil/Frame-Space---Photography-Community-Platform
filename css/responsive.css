@@ -6,7 +6,8 @@
 
   .hero-grid,
   .featured-showcase,
-  .photo-detail-layout {
+  .photo-detail-layout,
+  .upload-layout {
     grid-template-columns: 1fr;
   }
 
@@ -68,13 +69,16 @@
   .explore-controls-row,
   .photo-grid,
   .footer-grid,
-  .profile-stats {
+  .profile-stats,
+  .form-row-2 {
     grid-template-columns: 1fr;
   }
 
   .featured-content,
   .photo-detail-panel,
-  .comments-section {
+  .comments-section,
+  .upload-card,
+  .preview-card {
     padding: var(--space-lg);
   }
 
