@@ -5,7 +5,7 @@
   }
 
   .hero-grid,
-  .featured-showcase,
+  .potd-showcase,
   .photo-detail-layout,
   .upload-layout {
     grid-template-columns: 1fr;
@@ -74,12 +74,17 @@
     grid-template-columns: 1fr;
   }
 
-  .featured-content,
+  .potd-content,
   .photo-detail-panel,
   .comments-section,
   .upload-card,
   .preview-card {
     padding: var(--space-lg);
+  }
+
+  .potd-photographer {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .spotlight-card {

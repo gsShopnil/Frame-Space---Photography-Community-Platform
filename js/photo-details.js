@@ -31,14 +31,16 @@ function renderPhotoDetails(photo) {
   }
   if (categoryEl) categoryEl.textContent = photo.category;
   if (titleEl) titleEl.textContent = photo.title;
-  if (captionEl) captionEl.textContent = photo.caption;
+  if (captionEl) captionEl.textContent = photo.story || photo.caption;
 
   if (authorLinkEl) {
     authorLinkEl.textContent = `${photographer.name} (${photographer.username})`;
     authorLinkEl.href = `profile.html?id=${encodeURIComponent(photographer.id)}`;
   }
 
-  if (locationEl) locationEl.textContent = photo.location;
+  if (locationEl) {
+    locationEl.textContent = photo.camera ? `${photo.location} • ${photo.camera}` : photo.location;
+  }
   if (dateEl) dateEl.textContent = photo.createdAt;
 
   if (likeBtn) updateLikeButtonUI(likeBtn, photo);
