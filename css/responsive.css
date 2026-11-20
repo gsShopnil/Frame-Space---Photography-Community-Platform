@@ -19,7 +19,6 @@
   }
 }
 
-/* Mobile Breakpoint (<= 768px) */
 @media (max-width: 768px) {
   h1,
   .hero-title {
@@ -35,9 +34,6 @@
     padding: var(--space-xl) 0;
   }
 
-  .explore-controls-row { grid-template-columns: 1fr; }
-
-  /* Responsive Navigation with Toggle */
   .navbar {
     flex-wrap: wrap;
   }
@@ -68,8 +64,10 @@
     align-items: flex-start;
   }
 
+  .explore-controls-row,
   .photo-grid,
-  .footer-grid {
+  .footer-grid,
+  .profile-stats {
     grid-template-columns: 1fr;
   }
 
@@ -81,5 +79,17 @@
     flex-direction: column;
     text-align: center;
     padding: var(--space-lg);
+  }
+
+  .profile-header-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    padding: var(--space-lg);
+  }
+
+  .profile-name-row,
+  .interest-tags {
+    justify-content: center;
   }
 }

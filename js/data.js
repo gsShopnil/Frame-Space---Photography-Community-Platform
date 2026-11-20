@@ -1,5 +1,3 @@
-
-
 const samplePhotographers = [
   {
     id: "gsshopnil",
@@ -47,7 +45,7 @@ const samplePhotos = [
     category: "Landscape",
     location: "Dhaka, Bangladesh",
     image: "assets/images/photos/upload-1.jpg",
-    photographerId: "nadia-karim",
+    photographerId: "gsshopnil",
     likes: 34,
     createdAt: "2026-11-18"
   },
@@ -80,7 +78,7 @@ const samplePhotos = [
     category: "Street",
     location: "Old Dhaka, Bangladesh",
     image: "assets/images/photos/featured-street.jpg",
-    photographerId: "arafat-rahman",
+    photographerId: "Tanzirhaw",
     likes: 52,
     createdAt: "2026-11-14"
   },
@@ -91,7 +89,7 @@ const samplePhotos = [
     category: "Street",
     location: "Dhaka, Bangladesh",
     image: "assets/images/photos/hero-frame.jpg",
-    photographerId: "arafat-rahman",
+    photographerId: "Tanzirhaw",
     likes: 41,
     createdAt: "2026-11-12"
   },
@@ -102,11 +100,12 @@ const samplePhotos = [
     category: "Nature",
     location: "Sreemangal, Bangladesh",
     image: "assets/images/photos/upload-4.jpg",
-    photographerId: "nadia-karim",
+    photographerId: "gsshopnil",
     likes: 47,
     createdAt: "2026-11-10"
   }
 ];
+
 function getPhotographerById(photographerId) {
   return (
     samplePhotographers.find((person) => person.id === photographerId) || {

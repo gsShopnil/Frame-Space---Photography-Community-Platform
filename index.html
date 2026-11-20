@@ -6,22 +6,20 @@
   <meta name="description" content="FrameSpace — A Community Beyond the Frame. Discover visual stories and share your photography.">
   <title>FrameSpace — A Community Beyond the Frame</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/responsive.css">
 
-  <!-- Global JavaScript -->
   <script src="js/main.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/feed.js" defer></script>
 </head>
 <body>
 
-  <!-- Header & Navigation -->
   <header class="site-header">
     <div class="container navbar">
       <a href="index.html" class="brand-logo">Frame<span>Space</span></a>
@@ -49,7 +47,6 @@
   </header>
 
   <main>
-    <!-- 1. Hero Section -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
@@ -74,7 +71,6 @@
       </div>
     </section>
 
-    <!-- 2. Featured Photography -->
     <section class="section">
       <div class="container">
         <div class="section-header">
@@ -92,71 +88,27 @@
             <p class="featured-story">
               Shot just minutes after a heavy evening downpour, when the empty pavement turned into a mirror for warm sodium streetlights and passing rickshaws.
             </p>
-            <p class="featured-meta">Captured by <strong>Arafat Rahman</strong> &mdash; Old Dhaka</p>
+            <p class="featured-meta">Captured by <strong>Tanzir Hawlader</strong> &mdash; Old Dhaka</p>
             <a href="explore.html" class="btn btn-outline">Discover More Stories</a>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- 3. Latest Uploads Preview -->
     <section class="section">
       <div class="container">
         <div class="section-header-row">
           <div>
-            <h2>Latest Uploads</h2>
-            <p class="section-subtitle">Fresh frames shared by our community members.</p>
+            <h2>Community Feed</h2>
+            <p class="section-subtitle">Fresh frames and visual stories shared by our photographers.</p>
           </div>
-          <a href="explore.html" class="text-link">View all photographs &rarr;</a>
+          <a href="explore.html" class="text-link">Explore all photographs &rarr;</a>
         </div>
 
-        <div class="photo-grid">
-          <article class="photo-card">
-            <div class="photo-card-media">
-              <img src="assets/images/photos/upload-1.jpg" alt="Morning river fog with wooden boats">
-            </div>
-            <div class="photo-card-body">
-              <div class="photo-card-top">
-                <span class="badge">Landscape</span>
-                <span class="photo-card-meta">34 Likes</span>
-              </div>
-              <h3 class="photo-card-title">Dawn on the Buriganga</h3>
-              <p class="photo-card-meta">by  Galib Shahriar Shopnil</p>
-            </div>
-          </article>
-
-          <article class="photo-card">
-            <div class="photo-card-media">
-              <img src="assets/images/photos/upload-2.jpg" alt="Close-up portrait bathed in soft window light">
-            </div>
-            <div class="photo-card-body">
-              <div class="photo-card-top">
-                <span class="badge">Portrait</span>
-                <span class="photo-card-meta">28 Likes</span>
-              </div>
-              <h3 class="photo-card-title">Window Light Study</h3>
-              <p class="photo-card-meta">by Tariq Hasan</p>
-            </div>
-          </article>
-
-          <article class="photo-card">
-            <div class="photo-card-media">
-              <img src="assets/images/photos/upload-3.jpg" alt="Geometric shadows on brutalist concrete wall">
-            </div>
-            <div class="photo-card-body">
-              <div class="photo-card-top">
-                <span class="badge">Architecture</span>
-                <span class="photo-card-meta">19 Likes</span>
-              </div>
-              <h3 class="photo-card-title">Concrete Geometry</h3>
-              <p class="photo-card-meta">by Samira Chowdhury</p>
-            </div>
-          </article>
-        </div>
+        <div id="photoFeedGrid" class="photo-grid"></div>
       </div>
     </section>
 
-    <!-- 4. Photographer Spotlight -->
     <section class="section">
       <div class="container">
         <div class="section-header">
@@ -171,19 +123,18 @@
             class="spotlight-avatar"
           >
           <div class="spotlight-info">
-            <p class="spotlight-meta">Documentary &amp; Landscape &bull; Sylhet, Bangladesh</p>
+            <p class="spotlight-meta">Street &amp; Documentary &bull; Dhaka, Bangladesh</p>
             <h3>Galib Shahriar Shopnil</h3>
             <p class="spotlight-bio">
-              Capturing quiet early-morning moments along rivers, tea valleys, and rural train stations. Galib focuses on natural light and unhurried visual narratives.
+              Visual storyteller focused on capturing candid moments, natural light, and everyday life across Bangladesh.
             </p>
-            <a href="profile.html" class="btn btn-outline">View Portfolio</a>
+            <a href="profile.html?id=gsshopnil" class="btn btn-outline">View Portfolio</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
