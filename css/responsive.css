@@ -35,6 +35,8 @@
     padding: var(--space-xl) 0;
   }
 
+  .explore-controls-row { grid-template-columns: 1fr; }
+
   /* Responsive Navigation with Toggle */
   .navbar {
     flex-wrap: wrap;
