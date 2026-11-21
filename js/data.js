@@ -9,9 +9,9 @@ const samplePhotographers = [
     avatar: "assets/images/avatars/spotlight-photographer.jpg"
   },
   {
-    id: "Tanzirhaw",
-    name: "Tanzir Hawlader",
-    username: "@Tanzirhaw",
+    id: "Tanjirhaw",
+    name: "Tanjir Hawlader", 
+    username: "@Tanjirhaw",
     location: "Dhaka, Bangladesh",
     bio: "Street and urban storyteller drawn to monsoon reflections, shadows, and night markets.",
     interests: ["Street", "Night Photography", "35mm"],
@@ -40,8 +40,8 @@ const samplePhotographers = [
 const samplePhotos = [
   {
     id: "photo-1",
-    title: "Dawn on the Buriganga",
-    caption: "Wooden boats waiting quietly in winter river fog just before sunrise.",
+    title: "Lightspeed",
+    caption: "long exposure",
     story: "I arrived at the riverbank around 5:40 AM while the mist was still thick above the water. Waiting nearly forty minutes in silence allowed the boatmen to settle into their rhythm before the first warm sunlight broke through the haze.",
     camera: "50mm f/2.8 • 1/250s • ISO 400",
     category: "Landscape",
@@ -53,7 +53,7 @@ const samplePhotos = [
     isSaved: false,
     createdAt: "2026-11-18",
     comments: [
-      { author: "Tanzir Hawlader", text: "The morning mist on the water feels so peaceful.", createdAt: "2026-11-18" },
+      { author: "Tanjir Hawlader", text: "The morning mist on the water feels so peaceful.", createdAt: "2026-11-18" },
       { author: "Tariq Hasan", text: "Love the tonal separation in the background boats.", createdAt: "2026-11-19" }
     ]
   },
@@ -93,14 +93,14 @@ const samplePhotos = [
   },
   {
     id: "photo-4",
-    title: "Monsoon Reflections",
+    title: "Dogs of Chernobyl by Megadeath",
     caption: "Rain-slicked pavement mirroring warm evening streetlamps after a sudden downpour.",
     story: "Shot just minutes after a heavy evening downpour in Old Dhaka, when the empty pavement turned into a dark mirror for warm sodium streetlights and passing rickshaws. Getting low near the puddle brought the reflections alive.",
     camera: "35mm f/2.0 • 1/125s • ISO 800",
     category: "Street",
     location: "Old Dhaka, Bangladesh",
     image: "assets/images/photos/featured-street.jpg",
-    photographerId: "Tanzirhaw",
+    photographerId: "Tanjirhaw",
     likes: 52,
     isLiked: false,
     isSaved: false,
@@ -118,7 +118,7 @@ const samplePhotos = [
     category: "Street",
     location: "Dhaka, Bangladesh",
     image: "assets/images/photos/hero-frame.jpg",
-    photographerId: "Tanzirhaw",
+    photographerId: "Tanjirhaw",
     likes: 41,
     isLiked: false,
     isSaved: false,
